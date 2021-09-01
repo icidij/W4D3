@@ -6,9 +6,11 @@ class Piece
     @board = board
     @pos = pos
     @opposite_color = opposite_color
+    @symbol = nil
   end
 
   def to_s
+    @symbol
   end
 
   def moves(pos)
@@ -18,5 +20,11 @@ class Piece
     return "black" if @color == "white"
     return "white" if @color == "black"
     nil
+  end
+
+  def inspect
+    {
+      symbol: symbol
+  }.inspect
   end
 end

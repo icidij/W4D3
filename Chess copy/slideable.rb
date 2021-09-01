@@ -30,7 +30,7 @@ module Slideable
     no_available moves = false
     until no_available_moves
       position = [position[0] + dr, position[1] + dc]
-      if (self.board[position] == Nullpiece.instance) && (self.board[position].valid_position?)
+      if (self.board[position] == NullPiece.instance) && (self.board[position].valid_position?)
         available_moves << position
       elsif (self.board[position].color != self.color) && (self.board[position].valid_position?)
         available_moves << position

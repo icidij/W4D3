@@ -1,5 +1,6 @@
 require_relative "../piece.rb"
 class Pawn < Piece
+  attr_reader :color
   def initialize(color, board, pos)
     super
     @symbol = "Pawn"
@@ -31,7 +32,7 @@ class Pawn < Piece
     else
       move = forward_dir
     end
-    @board[[move+@pos[0],@pos[1]] == nil ? [[move+@pos[0],@pos[1]] : []
+    @board[move+@pos[0],@pos[1]] == NullPiece.instance ? [move+@pos[0],@pos[1]] : []
   end    
 
   def side_attacks
@@ -45,4 +46,5 @@ class Pawn < Piece
     end
     options   #[[],[]]
   end
+
 end
