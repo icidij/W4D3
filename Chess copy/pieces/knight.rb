@@ -1,13 +1,13 @@
 require_relative "../piece.rb"
-require_relative "../slideable.rb"
-class Rook < Piece
+require_relative "../stepable.rb"
+class Knight < Piece
 
-include Slideable
+include Stepable
 attr_reader :symbol
     def initialize(color, board, pos)
 
         super
-        @symbol = "Rook"
+        @symbol = "Knight"
     end
 
 

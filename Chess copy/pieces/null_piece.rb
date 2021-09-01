@@ -6,4 +6,7 @@ class NullPiece < Piece
         super(board, pos)
     end
 
+
+    
+
 end
