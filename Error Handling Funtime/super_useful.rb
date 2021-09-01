@@ -1,6 +1,9 @@
 # PHASE 2
 def convert_to_int(str)
+  
   Integer(str)
+  rescue 
+    return 5 if str == 'five'
 end
 
 # PHASE 3
@@ -18,8 +21,13 @@ def feed_me_a_fruit
   puts "Hello, I am a friendly monster. :)"
 
   puts "Feed me a fruit! (Enter the name of a fruit:)"
+  begin
   maybe_fruit = gets.chomp
   reaction(maybe_fruit) 
+  rescue
+  puts "I don't like that fruit, try another"
+  retry
+  end
 end  
 
 # PHASE 4
